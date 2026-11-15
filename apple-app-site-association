@@ -1,0 +1,43 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "BT8T5D9JD8.com.linkrouter.app",
+        "appIDs": [
+          "BT8T5D9JD8.com.linkrouter.app"
+        ],
+        "paths": [
+          "/o/*",
+          "/o"
+        ],
+        "components": [
+          {
+            "/": "/o/*"
+          },
+          {
+            "/": "/o"
+          }
+        ]
+      },
+      {
+        "appID": "BT8T5D9JD8.app.jackfruit3114.leopard8609",
+        "appIDs": [
+          "BT8T5D9JD8.app.jackfruit3114.leopard8609"
+        ],
+        "paths": [
+          "/o/*",
+          "/o"
+        ],
+        "components": [
+          {
+            "/": "/o/*"
+          },
+          {
+            "/": "/o"
+          }
+        ]
+      }
+    ]
+  }
+}
