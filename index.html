@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LinkRouter</title>
+<style>
+  body{font:17px -apple-system,system-ui,sans-serif;margin:0;padding:32px 20px;background:#111;color:#eee;text-align:center}
+  a.b{display:block;margin:14px 0;padding:16px;border-radius:14px;background:#0a84ff;color:#fff;text-decoration:none;font-weight:600}
+  a.s{background:#333}
+  p{color:#999;font-size:14px;line-height:1.4}
+</style>
+</head>
+<body>
+<h2>Universal Link didn't fire</h2>
+<p>Safari loaded this page instead of opening LinkRouter. That usually means the link came from an automatic redirect, LinkRouter isn't installed, or iOS hasn't fetched the association file yet.</p>
+<a class="b" id="app" href="#">Open in app</a>
+<a class="b s" id="web" href="#">Open the web page instead</a>
+<p>If this keeps happening for links you <b>land</b> on, set <code>LANDING = "button"</code> in the userscript.</p>
+<script>
+  const q = new URLSearchParams(location.search || location.hash.slice(1));
+  const u = q.get("u"), w = q.get("w");
+  if (u) document.getElementById("app").href = u;
+  if (w) { const x = new URL(w); x.searchParams.set("noapp", "1"); document.getElementById("web").href = x.href; }
+</script>
+</body>
+</html>
